@@ -262,5 +262,17 @@ namespace DayscoutIcon.Properties {
                 this["alarmBlglHigher"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("UTC")]
+        public string timezone {
+            get {
+                return ((string)(this["timezone"]));
+            }
+            set {
+                this["timezone"] = value;
+            }
+        }
     }
 }

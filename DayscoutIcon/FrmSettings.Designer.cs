@@ -65,6 +65,8 @@
             this.lblTextBloodsugarValidUnit = new System.Windows.Forms.Label();
             this.chxLinkNightscout = new System.Windows.Forms.CheckBox();
             this.groupBoxAlerts = new System.Windows.Forms.GroupBox();
+            this.lblTextServerTimezone = new System.Windows.Forms.Label();
+            this.cbxTimezones = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownGlucoseUpdateInterval)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownNetworkTimeout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownAlarmHigherThenNormal)).BeginInit();
@@ -78,7 +80,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(10, 347);
+            this.btnCancel.Location = new System.Drawing.Point(10, 375);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(171, 32);
             this.btnCancel.TabIndex = 13;
@@ -89,7 +91,7 @@
             // lbTextGlucoseUpdateInterval
             // 
             this.lbTextGlucoseUpdateInterval.AutoSize = true;
-            this.lbTextGlucoseUpdateInterval.Location = new System.Drawing.Point(7, 77);
+            this.lbTextGlucoseUpdateInterval.Location = new System.Drawing.Point(9, 108);
             this.lbTextGlucoseUpdateInterval.Name = "lbTextGlucoseUpdateInterval";
             this.lbTextGlucoseUpdateInterval.Size = new System.Drawing.Size(139, 13);
             this.lbTextGlucoseUpdateInterval.TabIndex = 1;
@@ -97,7 +99,7 @@
             // 
             // btnOk
             // 
-            this.btnOk.Location = new System.Drawing.Point(184, 347);
+            this.btnOk.Location = new System.Drawing.Point(184, 375);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(180, 32);
             this.btnOk.TabIndex = 14;
@@ -112,7 +114,7 @@
             0,
             0,
             0});
-            this.numUpDownGlucoseUpdateInterval.Location = new System.Drawing.Point(159, 75);
+            this.numUpDownGlucoseUpdateInterval.Location = new System.Drawing.Point(161, 106);
             this.numUpDownGlucoseUpdateInterval.Maximum = new decimal(new int[] {
             3600000,
             0,
@@ -138,7 +140,7 @@
             // lblTextUpdateIntervalUnit
             // 
             this.lblTextUpdateIntervalUnit.AutoSize = true;
-            this.lblTextUpdateIntervalUnit.Location = new System.Drawing.Point(228, 77);
+            this.lblTextUpdateIntervalUnit.Location = new System.Drawing.Point(230, 108);
             this.lblTextUpdateIntervalUnit.Name = "lblTextUpdateIntervalUnit";
             this.lblTextUpdateIntervalUnit.Size = new System.Drawing.Size(20, 13);
             this.lblTextUpdateIntervalUnit.TabIndex = 4;
@@ -189,7 +191,7 @@
             0,
             0,
             0});
-            this.numUpDownNetworkTimeout.Location = new System.Drawing.Point(159, 96);
+            this.numUpDownNetworkTimeout.Location = new System.Drawing.Point(161, 127);
             this.numUpDownNetworkTimeout.Maximum = new decimal(new int[] {
             3600000,
             0,
@@ -214,7 +216,7 @@
             // lblTextNetworkTimeout
             // 
             this.lblTextNetworkTimeout.AutoSize = true;
-            this.lblTextNetworkTimeout.Location = new System.Drawing.Point(7, 98);
+            this.lblTextNetworkTimeout.Location = new System.Drawing.Point(9, 129);
             this.lblTextNetworkTimeout.Name = "lblTextNetworkTimeout";
             this.lblTextNetworkTimeout.Size = new System.Drawing.Size(90, 13);
             this.lblTextNetworkTimeout.TabIndex = 10;
@@ -223,7 +225,7 @@
             // lblTextNetworkTimeoutUnit
             // 
             this.lblTextNetworkTimeoutUnit.AutoSize = true;
-            this.lblTextNetworkTimeoutUnit.Location = new System.Drawing.Point(228, 98);
+            this.lblTextNetworkTimeoutUnit.Location = new System.Drawing.Point(230, 129);
             this.lblTextNetworkTimeoutUnit.Name = "lblTextNetworkTimeoutUnit";
             this.lblTextNetworkTimeoutUnit.Size = new System.Drawing.Size(20, 13);
             this.lblTextNetworkTimeoutUnit.TabIndex = 11;
@@ -435,7 +437,7 @@
             // lblTextBloodsugar
             // 
             this.lblTextBloodsugar.AutoSize = true;
-            this.lblTextBloodsugar.Location = new System.Drawing.Point(7, 151);
+            this.lblTextBloodsugar.Location = new System.Drawing.Point(9, 182);
             this.lblTextBloodsugar.Name = "lblTextBloodsugar";
             this.lblTextBloodsugar.Size = new System.Drawing.Size(111, 13);
             this.lblTextBloodsugar.TabIndex = 24;
@@ -443,7 +445,7 @@
             // 
             // numUpDownNumberDisplayRounding
             // 
-            this.numUpDownNumberDisplayRounding.Location = new System.Drawing.Point(159, 147);
+            this.numUpDownNumberDisplayRounding.Location = new System.Drawing.Point(161, 178);
             this.numUpDownNumberDisplayRounding.Maximum = new decimal(new int[] {
             9,
             0,
@@ -466,7 +468,7 @@
             this.cbBloodsugarUnits.Items.AddRange(new object[] {
             "mmol",
             "mg/dl"});
-            this.cbBloodsugarUnits.Location = new System.Drawing.Point(159, 173);
+            this.cbBloodsugarUnits.Location = new System.Drawing.Point(161, 204);
             this.cbBloodsugarUnits.MaxDropDownItems = 3;
             this.cbBloodsugarUnits.Name = "cbBloodsugarUnits";
             this.cbBloodsugarUnits.Size = new System.Drawing.Size(63, 21);
@@ -477,7 +479,7 @@
             // lblTextBloodsugarUnits
             // 
             this.lblTextBloodsugarUnits.AutoSize = true;
-            this.lblTextBloodsugarUnits.Location = new System.Drawing.Point(7, 176);
+            this.lblTextBloodsugarUnits.Location = new System.Drawing.Point(9, 207);
             this.lblTextBloodsugarUnits.Name = "lblTextBloodsugarUnits";
             this.lblTextBloodsugarUnits.Size = new System.Drawing.Size(88, 13);
             this.lblTextBloodsugarUnits.TabIndex = 27;
@@ -486,7 +488,7 @@
             // lbTextDecimals
             // 
             this.lbTextDecimals.AutoSize = true;
-            this.lbTextDecimals.Location = new System.Drawing.Point(228, 151);
+            this.lbTextDecimals.Location = new System.Drawing.Point(230, 182);
             this.lbTextDecimals.Name = "lbTextDecimals";
             this.lbTextDecimals.Size = new System.Drawing.Size(48, 13);
             this.lbTextDecimals.TabIndex = 28;
@@ -505,7 +507,7 @@
             0,
             0,
             0});
-            this.numUpDownSecondsBloodsugarValid.Location = new System.Drawing.Point(159, 122);
+            this.numUpDownSecondsBloodsugarValid.Location = new System.Drawing.Point(161, 153);
             this.numUpDownSecondsBloodsugarValid.Maximum = new decimal(new int[] {
             3600,
             0,
@@ -531,7 +533,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 124);
+            this.label1.Location = new System.Drawing.Point(9, 155);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(131, 13);
             this.label1.TabIndex = 29;
@@ -540,7 +542,7 @@
             // lblTextBloodsugarValidUnit
             // 
             this.lblTextBloodsugarValidUnit.AutoSize = true;
-            this.lblTextBloodsugarValidUnit.Location = new System.Drawing.Point(228, 125);
+            this.lblTextBloodsugarValidUnit.Location = new System.Drawing.Point(230, 156);
             this.lblTextBloodsugarValidUnit.Name = "lblTextBloodsugarValidUnit";
             this.lblTextBloodsugarValidUnit.Size = new System.Drawing.Size(12, 13);
             this.lblTextBloodsugarValidUnit.TabIndex = 31;
@@ -549,7 +551,7 @@
             // chxLinkNightscout
             // 
             this.chxLinkNightscout.AutoSize = true;
-            this.chxLinkNightscout.Location = new System.Drawing.Point(10, 200);
+            this.chxLinkNightscout.Location = new System.Drawing.Point(12, 231);
             this.chxLinkNightscout.Name = "chxLinkNightscout";
             this.chxLinkNightscout.Size = new System.Drawing.Size(258, 17);
             this.chxLinkNightscout.TabIndex = 32;
@@ -570,18 +572,39 @@
             this.groupBoxAlerts.Controls.Add(this.lblTextAlarmUnitsHigher);
             this.groupBoxAlerts.Controls.Add(this.lblTextAlarmUnitsLow);
             this.groupBoxAlerts.Controls.Add(this.lblTextAlarmUnitsLower);
-            this.groupBoxAlerts.Location = new System.Drawing.Point(4, 227);
+            this.groupBoxAlerts.Location = new System.Drawing.Point(4, 256);
             this.groupBoxAlerts.Name = "groupBoxAlerts";
             this.groupBoxAlerts.Size = new System.Drawing.Size(360, 113);
             this.groupBoxAlerts.TabIndex = 33;
             this.groupBoxAlerts.TabStop = false;
             this.groupBoxAlerts.Text = "Alerts";
             // 
+            // lblTextServerTimezone
+            // 
+            this.lblTextServerTimezone.AutoSize = true;
+            this.lblTextServerTimezone.Location = new System.Drawing.Point(7, 70);
+            this.lblTextServerTimezone.Name = "lblTextServerTimezone";
+            this.lblTextServerTimezone.Size = new System.Drawing.Size(86, 13);
+            this.lblTextServerTimezone.TabIndex = 34;
+            this.lblTextServerTimezone.Text = "Server timezone:";
+            // 
+            // cbxTimezones
+            // 
+            this.cbxTimezones.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxTimezones.FormattingEnabled = true;
+            this.cbxTimezones.Location = new System.Drawing.Point(99, 67);
+            this.cbxTimezones.Name = "cbxTimezones";
+            this.cbxTimezones.Size = new System.Drawing.Size(265, 21);
+            this.cbxTimezones.TabIndex = 35;
+            this.toolTipSettings.SetToolTip(this.cbxTimezones, "The timezone used by the nightscout server. If unsure leave at UTC(default)");
+            // 
             // FrmSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(376, 391);
+            this.ClientSize = new System.Drawing.Size(380, 419);
+            this.Controls.Add(this.cbxTimezones);
+            this.Controls.Add(this.lblTextServerTimezone);
             this.Controls.Add(this.groupBoxAlerts);
             this.Controls.Add(this.chxLinkNightscout);
             this.Controls.Add(this.lblTextBloodsugarValidUnit);
@@ -661,6 +684,8 @@
         private System.Windows.Forms.Label lblTextBloodsugarValidUnit;
         private System.Windows.Forms.CheckBox chxLinkNightscout;
         private System.Windows.Forms.GroupBox groupBoxAlerts;
+        private System.Windows.Forms.Label lblTextServerTimezone;
+        private System.Windows.Forms.ComboBox cbxTimezones;
     }
 }
 

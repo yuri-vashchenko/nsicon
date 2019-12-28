@@ -142,6 +142,20 @@ namespace DayscoutIcon
                 blglDatetime = DateTime.Parse(sysTime, new CultureInfo("us-en", false));
                 // Display date and time as ISO 8601 without seconds (yyyy-mm-dd hh:mm)
                 //datetimevalue = "\r\n" + string.Format("{0:D}-{1:D2}-{2:D2} {3:D2}:{4:D2}", dt.Year, dt.Month, dt.Day, dt.Hour, dt.Minute);
+                if (DayscoutIcon.Properties.Settings.Default.timezone == "UTC") { 
+                    blglDatetime = blglDatetime.ToLocalTime();
+                } else {
+                    try
+                    {
+                        TimeZoneInfo tzi = TimeZoneInfo.FindSystemTimeZoneById(DayscoutIcon.Properties.Settings.Default.timezone);
+                        DateTime utcBlglDatetime = blglDatetime.Add(tzi.BaseUtcOffset);
+                        blglDatetime = utcBlglDatetime.ToLocalTime();
+                    } catch (TimeZoneNotFoundException tzNoTFoundExc)
+                    {
+                        OnStatusChange(true, "Unknown nightscout timezone id configured.");
+                        return;
+                    }
+                }
             }
 
             string direction = "";
@@ -151,11 +165,16 @@ namespace DayscoutIcon
             }
 
             OnNewBloodsugarValue(blglvalue, blglDatetime, direction);
+            decimal blglSensorError = new decimal(0);
             decimal blglLow = DayscoutIcon.Properties.Settings.Default.alarmBlglLow;
             decimal blglLowerThenNormal = DayscoutIcon.Properties.Settings.Default.alarmBlglLower;
             decimal blglHigherThenNormal = DayscoutIcon.Properties.Settings.Default.alarmBlglHigher;
             decimal blglHigh = DayscoutIcon.Properties.Settings.Default.alarmBlglHigh;
-            if (blglvalue.CompareTo(blglLow) < 0)
+            if (blglvalue.CompareTo(blglSensorError) == 0)
+            {
+                OnStatusChange(true, "Could not get value.");
+            }
+            else if (blglvalue.CompareTo(blglLow) < 0)
             {
                 // Hypoglycemia alarm, show red flag
                 OnBloodsugarAlarmChange(AlarmBlgl.LOW, blglvalue, blglDatetime);
@@ -190,7 +209,7 @@ namespace DayscoutIcon
             //System.Net.ServicePointManager.Expect100Continue = false;
             System.Net.ServicePointManager.EnableDnsRoundRobin = true;
             System.Net.ServicePointManager.DnsRefreshTimeout = DayscoutIcon.Properties.Settings.Default.durationDNSCache;
-            System.Net.ServicePointManager.DefaultConnectionLimit = 2;
+            System.Net.ServicePointManager.DefaultConnectionLimit = 3;
             long milisecondsSinceEpoch = this.GetMsSinceEpochMinsGlucoseValidDuration();
             string urlEntries = DayscoutIcon.Properties.Settings.Default.serverUrl + "/api/v1/entries.json?count=2&find[date][$gte]=" + milisecondsSinceEpoch.ToString();
             HttpWebRequest request = (System.Net.HttpWebRequest)System.Net.WebRequest.Create(urlEntries);

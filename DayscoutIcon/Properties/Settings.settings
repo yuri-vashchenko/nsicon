@@ -62,5 +62,8 @@
     <Setting Name="alarmBlglHigher" Type="System.Decimal" Scope="User">
       <Value Profile="(Default)">7.9</Value>
     </Setting>
+    <Setting Name="timezone" Type="System.String" Scope="User">
+      <Value Profile="(Default)">UTC</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

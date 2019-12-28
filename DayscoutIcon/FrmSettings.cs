@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -15,6 +16,7 @@ namespace DayscoutIcon
         private const string BLGLUNITMMOL = "mmol/l";
         private const string BLGLUNITMGDL = "mg/dl";
         private bool changeunits = false;
+
         /// <summary>
         /// Creating a new instance of FrmSettings class.
         /// </summary>
@@ -42,6 +44,17 @@ namespace DayscoutIcon
             this.numUpDownAlarmHigh.Value = DayscoutIcon.Properties.Settings.Default.alarmBlglHigh;
             this.numUpDownAlarmLowerThenNormal.Value = DayscoutIcon.Properties.Settings.Default.alarmBlglLower;
             this.numUpDownAlarmHigherThenNormal.Value = DayscoutIcon.Properties.Settings.Default.alarmBlglHigher;
+
+            // Added all timezones
+            ReadOnlyCollection<TimeZoneInfo> timezones = TimeZoneInfo.GetSystemTimeZones();
+            for (int i = 0; i < timezones.Count; ++i) {
+                
+                cbxTimezones.Items.Add(timezones[i].DisplayName);
+                if (timezones[i].Id == DayscoutIcon.Properties.Settings.Default.timezone)
+                {
+                    this.cbxTimezones.SelectedIndex = i;
+                }
+            }
         }
 
         /// <summary>
@@ -81,6 +94,15 @@ namespace DayscoutIcon
             DayscoutIcon.Properties.Settings.Default.alarmBlglHigh = this.numUpDownAlarmHigh.Value;
             DayscoutIcon.Properties.Settings.Default.alarmBlglLower = this.numUpDownAlarmLowerThenNormal.Value;
             DayscoutIcon.Properties.Settings.Default.alarmBlglHigher = this.numUpDownAlarmHigherThenNormal.Value;
+
+            if (this.cbxTimezones.SelectedIndex > 0) {
+                ReadOnlyCollection<TimeZoneInfo> timezones = TimeZoneInfo.GetSystemTimeZones();
+                String timezoneId = timezones[this.cbxTimezones.SelectedIndex].Id;
+                if (!String.IsNullOrEmpty(timezoneId))
+                {
+                    DayscoutIcon.Properties.Settings.Default.timezone = timezoneId;
+                }
+            }
 
             DayscoutIcon.Properties.Settings.Default.Save();
             this.Close();
