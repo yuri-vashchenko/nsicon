@@ -3,11 +3,16 @@
 A trayicon for the desktop to display your blood glucose values from a Nightscout server 
 without having to have a webbrowser open. DayscoutIcon can show balloon tip or notification alarms
  on certain configurable blood glucose values.
-![trayicon, no alarms](/screenshots/trayicon_when_blgl_in_range.png?raw=true "DayscoutIcon trayicon, when blood glucose is within acceptable range.")
+![trayicon, no alarms](/screenshots/trayicon_when_blgl_in_range.png?raw=true "DayscoutIcon trayicon when blood glucose is within configurable acceptable range.")
+
+![yellow flag trayicon and DayscoutIcon contextmenu](/screenshots/trayicon_contextmenu.png?raw=true "DayscoutIcon trayicon and contextmenu with options. The yellow flag is showed when blood glucose is above or below configurable normal range.")
+
+![trayicon no nightscout connection](/screenshots/trayicon_when_no_connection.png?raw=true "DayscoutIcon trayicon when connection with nightscout server failed.")
 
 ![notificationbar](/screenshots/noticationbar.png?raw=true "DayscoutIcon notifications in notifications bar")
 
-![settings](/screenshots/settings.png?raw=true "DayscoutIcon settings window")
+![DayscoutIcon settings](/screenshots/settings.png?raw=true "DayscoutIcon settings window")
+
 
 ### Disclaimer And Warning
 
