@@ -213,6 +213,7 @@ namespace NsIcon
             }
 
             Color color = Color.Gray;
+            Color fontColor = Color.White;
             if (bloodglucoseValue.CompareTo(blglLow) < 0)
             {
                 // Hypoglycemia alarm, show red flag
@@ -222,24 +223,25 @@ namespace NsIcon
             {
                 // Hyperglycemia alarm, show orange flag
                 color = Color.Orange;
+                fontColor = Color.Black;
             }
             else if (bloodglucoseValue.CompareTo(blglLowerThenNormal) < 0 || 
                      bloodglucoseValue.CompareTo(blglHigherThenNormal) > 0)
             {
                 // Becoming Hypoglycemia or becoming Hyperglycemia warning, yellow flag
                 color = Color.Yellow;
+                fontColor = Color.Black;
             }
             else
             {
                 // Bloodglucose within conigured range, green checkmark.
-                color = Color.Green;
+                color = Color.SeaGreen;
             }
 
-            FontStyle iconFontStyle = FontStyle.Regular;
+            FontStyle iconFontStyle = FontStyle.Bold;
             Font iconFont = new Font("Arial", 18, iconFontStyle);
-            Size size = TextRenderer.MeasureText(text, iconFont);
 
-            Brush brush = new SolidBrush(Color.White);
+            Brush brush = new SolidBrush(fontColor);
 
             // Create a bitmap and draw text on it
             const int iconWidth = 32;
