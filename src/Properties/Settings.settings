@@ -1,0 +1,69 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="NsIcon.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="serverUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="apiSecretSha1" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="updateInterval" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">60000</Value>
+    </Setting>
+    <Setting Name="networkTimeout" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">12000</Value>
+    </Setting>
+    <Setting Name="durationDNSCache" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3600000</Value>
+    </Setting>
+    <Setting Name="alarmLow" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="alarmHigh" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="alarmHigher" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="alarmLower" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="alarmBlglLow" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">4.0</Value>
+    </Setting>
+    <Setting Name="alarmBlglHigh" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">10.0</Value>
+    </Setting>
+    <Setting Name="alarmBlglLower" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">4.8</Value>
+    </Setting>
+    <Setting Name="displayMmolDecimalsRouding" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="secondsGlucoseValueValid" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">600</Value>
+    </Setting>
+    <Setting Name="bloodsugerUnitsIndex" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="disclaimerAgreed" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="confirmExit" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="noHypoAlarmWarningShowed" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="showNightscoutTrayLink" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="alarmBlglHigher" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">7.9</Value>
+    </Setting>
+    <Setting Name="timezone" Type="System.String" Scope="User">
+      <Value Profile="(Default)">UTC</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
