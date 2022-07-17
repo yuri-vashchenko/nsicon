@@ -220,7 +220,7 @@
             this.lblTextNetworkTimeout.Name = "lblTextNetworkTimeout";
             this.lblTextNetworkTimeout.Size = new System.Drawing.Size(90, 13);
             this.lblTextNetworkTimeout.TabIndex = 10;
-            this.lblTextNetworkTimeout.Text = "Netwerk time out:";
+            this.lblTextNetworkTimeout.Text = "Network time out:";
             // 
             // lblTextNetworkTimeoutUnit
             // 
@@ -272,88 +272,40 @@
             // 
             this.numUpDownAlarmHigherThenNormal.DecimalPlaces = 1;
             this.numUpDownAlarmHigherThenNormal.Enabled = false;
-            this.numUpDownAlarmHigherThenNormal.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
+            this.numUpDownAlarmHigherThenNormal.Increment = 0.1M;
             this.numUpDownAlarmHigherThenNormal.Location = new System.Drawing.Point(254, 38);
-            this.numUpDownAlarmHigherThenNormal.Maximum = new decimal(new int[] {
-            199,
-            0,
-            0,
-            65536});
-            this.numUpDownAlarmHigherThenNormal.Minimum = new decimal(new int[] {
-            6,
-            0,
-            0,
-            0});
+            this.numUpDownAlarmHigherThenNormal.Maximum = 12.0M;
+            this.numUpDownAlarmHigherThenNormal.Minimum = 6.0M;
             this.numUpDownAlarmHigherThenNormal.Name = "numUpDownAlarmHigherThenNormal";
             this.numUpDownAlarmHigherThenNormal.Size = new System.Drawing.Size(56, 20);
             this.numUpDownAlarmHigherThenNormal.TabIndex = 6;
-            this.numUpDownAlarmHigherThenNormal.Value = new decimal(new int[] {
-            90,
-            0,
-            0,
-            65536});
+            this.numUpDownAlarmHigherThenNormal.Value = 7.5M;
             this.numUpDownAlarmHigherThenNormal.ValueChanged += new System.EventHandler(this.numUpDownAlarmHigherThenNormal_ValueChanged);
             // 
             // numUpDownAlarmHigh
             // 
             this.numUpDownAlarmHigh.DecimalPlaces = 1;
-            this.numUpDownAlarmHigh.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
+            this.numUpDownAlarmHigh.Increment = 0.1M;
             this.numUpDownAlarmHigh.Location = new System.Drawing.Point(254, 15);
-            this.numUpDownAlarmHigh.Maximum = new decimal(new int[] {
-            27,
-            0,
-            0,
-            0});
-            this.numUpDownAlarmHigh.Minimum = new decimal(new int[] {
-            7,
-            0,
-            0,
-            0});
+            this.numUpDownAlarmHigh.Maximum = 22.0M;
+            this.numUpDownAlarmHigh.Minimum = 7.0M;
             this.numUpDownAlarmHigh.Name = "numUpDownAlarmHigh";
             this.numUpDownAlarmHigh.Size = new System.Drawing.Size(56, 20);
             this.numUpDownAlarmHigh.TabIndex = 5;
-            this.numUpDownAlarmHigh.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            65536});
+            this.numUpDownAlarmHigh.Value = 9.0M;
             this.numUpDownAlarmHigh.ValueChanged += new System.EventHandler(this.numUpDownAlarmHigh_ValueChanged);
             // 
             // numUpDownAlarmLow
             // 
             this.numUpDownAlarmLow.DecimalPlaces = 1;
-            this.numUpDownAlarmLow.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
+            this.numUpDownAlarmLow.Increment = 0.1M;
             this.numUpDownAlarmLow.Location = new System.Drawing.Point(254, 85);
-            this.numUpDownAlarmLow.Maximum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.numUpDownAlarmLow.Minimum = new decimal(new int[] {
-            23,
-            0,
-            0,
-            65536});
+            this.numUpDownAlarmLow.Maximum = 5.0M;
+            this.numUpDownAlarmLow.Minimum = 3.0M;
             this.numUpDownAlarmLow.Name = "numUpDownAlarmLow";
             this.numUpDownAlarmLow.Size = new System.Drawing.Size(56, 20);
             this.numUpDownAlarmLow.TabIndex = 8;
-            this.numUpDownAlarmLow.Value = new decimal(new int[] {
-            4,
-            0,
-            0,
-            0});
+            this.numUpDownAlarmLow.Value = 4.0M;
             this.numUpDownAlarmLow.ValueChanged += new System.EventHandler(this.numUpDownAlarmLow_ValueChanged);
             // 
             // chxAlarmLowerThenNormal
@@ -372,30 +324,14 @@
             // numUpDownAlarmLowerThenNormal
             // 
             this.numUpDownAlarmLowerThenNormal.DecimalPlaces = 1;
-            this.numUpDownAlarmLowerThenNormal.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
+            this.numUpDownAlarmLowerThenNormal.Increment = 0.1M;
             this.numUpDownAlarmLowerThenNormal.Location = new System.Drawing.Point(254, 61);
-            this.numUpDownAlarmLowerThenNormal.Maximum = new decimal(new int[] {
-            6,
-            0,
-            0,
-            0});
-            this.numUpDownAlarmLowerThenNormal.Minimum = new decimal(new int[] {
-            25,
-            0,
-            0,
-            65536});
+            this.numUpDownAlarmLowerThenNormal.Maximum = 6.0M;
+            this.numUpDownAlarmLowerThenNormal.Minimum = 4.0M;
             this.numUpDownAlarmLowerThenNormal.Name = "numUpDownAlarmLowerThenNormal";
             this.numUpDownAlarmLowerThenNormal.Size = new System.Drawing.Size(56, 20);
             this.numUpDownAlarmLowerThenNormal.TabIndex = 7;
-            this.numUpDownAlarmLowerThenNormal.Value = new decimal(new int[] {
-            48,
-            0,
-            0,
-            65536});
+            this.numUpDownAlarmLowerThenNormal.Value = 5.0M;
             this.numUpDownAlarmLowerThenNormal.ValueChanged += new System.EventHandler(this.numUpDownAlarmLowerThenNormal_ValueChanged);
             // 
             // lblTextAlarmUnitsHigh

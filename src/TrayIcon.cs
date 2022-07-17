@@ -216,26 +216,33 @@ namespace NsIcon
             Color fontColor = Color.White;
             if (bloodglucoseValue.CompareTo(blglLow) < 0)
             {
-                // Hypoglycemia alarm, show red flag
+                // Hypoglycemia alarm
                 color = Color.Red;
+                fontColor = Color.White;
             }
             else if (bloodglucoseValue.CompareTo(blglHigh) >= 0)
             {
-                // Hyperglycemia alarm, show orange flag
-                color = Color.Orange;
-                fontColor = Color.Black;
+                // Hyperglycemia alarm
+                color = Color.FromArgb(213, 9, 21);
+                fontColor = Color.White;
             }
-            else if (bloodglucoseValue.CompareTo(blglLowerThenNormal) < 0 || 
-                     bloodglucoseValue.CompareTo(blglHigherThenNormal) > 0)
+            else if (bloodglucoseValue.CompareTo(blglHigherThenNormal) > 0)
             {
-                // Becoming Hypoglycemia or becoming Hyperglycemia warning, yellow flag
-                color = Color.Yellow;
-                fontColor = Color.Black;
+                // Becoming Hypoglycemia or becoming Hyperglycemia warning
+                color = Color.FromArgb(234, 168, 0);
+                fontColor = Color.White;
+            }
+            else if (bloodglucoseValue.CompareTo(blglLowerThenNormal) < 0)
+            {
+                // Becoming Hypoglycemia or becoming Hyperglycemia warning
+                color = Color.FromArgb(234, 168, 0);
+                fontColor = Color.White;
             }
             else
             {
                 // Bloodglucose within conigured range, green checkmark.
-                color = Color.SeaGreen;
+                color = Color.FromArgb(134, 207, 70);
+                fontColor = Color.White;
             }
 
             FontStyle iconFontStyle = FontStyle.Bold;
