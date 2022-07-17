@@ -139,7 +139,7 @@ namespace NsIcon
             if (jsonObjEntry.ContainsKey("sysTime"))
             {
                 string sysTime = (string)jsonObjEntry["sysTime"];
-                blglDatetime = DateTime.Parse(sysTime, new CultureInfo("us-en", false));
+                blglDatetime = DateTime.Parse(sysTime, new CultureInfo("en-US", false));
                 // Display date and time as ISO 8601 without seconds (yyyy-mm-dd hh:mm)
                 //datetimevalue = "\r\n" + string.Format("{0:D}-{1:D2}-{2:D2} {3:D2}:{4:D2}", dt.Year, dt.Month, dt.Day, dt.Hour, dt.Minute);
                 if (NsIcon.Properties.Settings.Default.timezone == "UTC") { 
