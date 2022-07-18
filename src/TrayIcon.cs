@@ -235,7 +235,7 @@ namespace NsIcon
             else if (bloodglucoseValue.CompareTo(blglLowerThenNormal) < 0)
             {
                 // Becoming Hypoglycemia or becoming Hyperglycemia warning
-                color = Color.FromArgb(234, 168, 0);
+                color = Color.FromArgb(78, 143, 207);
                 fontColor = Color.White;
             }
             else
