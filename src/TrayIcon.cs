@@ -217,7 +217,7 @@ namespace NsIcon
             if (bloodglucoseValue.CompareTo(blglLow) < 0)
             {
                 // Hypoglycemia alarm
-                color = Color.Red;
+                color = Color.FromArgb(213, 9, 21);
                 fontColor = Color.White;
             }
             else if (bloodglucoseValue.CompareTo(blglHigh) >= 0)
